@@ -1,14 +1,20 @@
+import './ExpenseItem.css';
 /* 
 파일 이름은 무조건 대문자로 시작 (소문자로 시작하는 요소는 내장된 html 요소이기 때문이다.)
 단어와 단어를 연결하는 단어 역시 대문자로 작성
 */
 function ExpenseItem() {
+  const expenseDate = new Date(2021, 2, 28);
+  const expenseTitle = 'Car Insurance';
+  const expenseAmount = 294.67;
+
+
   return (
-    <div>
-      <div>March 21th 2023</div>
-      <div>
-        <h2>Car Insurance</h2>
-        <div>$294.67</div>   
+    <div className="expense-item">
+      <div>{expenseDate.toISOString()}</div>
+      <div className="expense-item__description">
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">{expenseAmount}</div>   
       </div>
     </div>
   );
