@@ -1,8 +1,11 @@
+// 사용자 지정 컴포넌트 임포트 하기
+import ExpenseItem from "./components/ExpenseItem";
+
 function App() {
     return (
         <div>
             <h2>Let's get started!</h2>
-            <p>This is also visible.</p>
+            <ExpenseItem></ExpenseItem>
         </div>
     );
 }
