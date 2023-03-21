@@ -3,7 +3,15 @@
 단어와 단어를 연결하는 단어 역시 대문자로 작성
 */
 function ExpenseItem() {
-    return <h2>Expense Item!</h2>
+  return (
+    <div>
+      <div>March 21th 2023</div>
+      <div>
+        <h2>Car Insurance</h2>
+        <div>$294.67</div>   
+      </div>
+    </div>
+  );
 }
 
 // ExpenseItem 컴포넌트를 사용하기 위해 이 함수를 이 파일의 기본함수로 내보낸다.

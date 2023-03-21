@@ -2,12 +2,12 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
-    return (
-        <div>
-            <h2>Let's get started!</h2>
-            <ExpenseItem></ExpenseItem>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+      <ExpenseItem></ExpenseItem>
+    </div>
+  );
 }
 /* 
 자바스크립트 안에 html 코드를 가지고 있음
