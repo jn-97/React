@@ -1,4 +1,5 @@
 import ExpenseDate from './ExpenseDate';
+import Card from './Card';
 import './ExpenseItem.css';
 /* 
 파일 이름은 무조건 대문자로 시작 (소문자로 시작하는 요소는 내장된 html 요소이기 때문이다.)
@@ -6,13 +7,13 @@ import './ExpenseItem.css';
 */
 function ExpenseItem(props) { 
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.date}/>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">{props.amount}</div>   
       </div>
-    </div>
+    </Card>
   );
 }
 
