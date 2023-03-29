@@ -1,6 +1,6 @@
 import React from 'react';
 import ExpenseDate from './ExpenseDate';
-import Card from './Card';
+import Card from '../UI/Card';
 import './ExpenseItem.css';
 /* 
 파일 이름은 무조건 대문자로 시작 (소문자로 시작하는 요소는 내장된 html 요소이기 때문이다.)
