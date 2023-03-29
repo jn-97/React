@@ -1,4 +1,4 @@
-// 사용자 지정 컴포넌트 임포트 하기
+import React from 'react';
 import Expenses from "./components/Expenses";
 
 function App() {
