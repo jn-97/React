@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState} from 'react';
+// 컴포넌트 함수가 다시 호출되는 곳에서 변경된 값을 반영하기 위함 => useState
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
@@ -7,15 +8,18 @@ import './ExpenseItem.css';
 단어와 단어를 연결하는 단어 역시 대문자로 작성
 */
 function ExpenseItem(props) { 
+  const [title, setTitle] = useState(props.title); //훅 => 무조건 함수 안에서 호출되어야 함
+  
   const clickHandler = () => {
-    console.log('Clicked!!!');
+    setTitle('Updated!');
+    console.log(title);
   };
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date}/>
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">{props.amount}</div>   
       </div>
       <button onClick={clickHandler}>Change Title</button>
