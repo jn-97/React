@@ -14,10 +14,13 @@ const ExpenseForm = () => {
 
   const titleChangeHandler = (event) => {
     // setEnteredTitle(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
-    });
+    // setUserInput({
+    //   ...userInput,
+    //   enteredTitle: event.target.value,
+    // });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: event.target.value };
+    }); // 이전 상태에 기반하는 상태에서는 이 접근 방법 사용하기
   };
 
   const amountChangeHandler = (event) => {
